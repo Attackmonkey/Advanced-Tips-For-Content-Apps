@@ -6,6 +6,7 @@
 
     <ItemGroup>
       <Content Include="App_Plugins\24Days\app.html" />
+      <Content Include="App_Plugins\24Days\listview.html" />
       <Content Include="App_Plugins\Bergmania.OpenStreetMap\bergmania.openstreetmap.html" />
       <Content Include="App_Plugins\Bergmania.OpenStreetMap\lib\leaflet\images\layers-2x.png" />
       <Content Include="App_Plugins\Bergmania.OpenStreetMap\lib\leaflet\images\layers.png" />
@@ -28,6 +29,7 @@
     </ItemGroup>
     <ItemGroup>
       <None Include="App_Plugins\24Days\24days.controller.js" />
+      <None Include="App_Plugins\24Days\24days.listview.controller.js" />
       <None Include="App_Plugins\24Days\package.manifest" />
       <None Include="App_Plugins\Bergmania.OpenStreetMap\bergmania.openstreetmap.controller.js" />
       <None Include="App_Plugins\Bergmania.OpenStreetMap\lib\leaflet\leaflet-src.esm.js" />

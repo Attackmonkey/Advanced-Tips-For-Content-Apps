@@ -43,7 +43,7 @@ namespace AdvancedContentApps.ContentApps
                 Name = "Article Import",
                 Icon = "icon-cloud-upload",
                 View = "/App_Plugins/24Days/app.html",
-                Weight = 0
+                Weight = 1
             };
         }
     }

@@ -1,6 +1,7 @@
 ﻿{
   // array of files we want to inject into the application
   "javascript": [
-    "~/App_Plugins/24Days/24days.controller.js"
+    "~/App_Plugins/24Days/24days.controller.js",
+    "~/App_Plugins/24Days/24days.listview.controller.js"
   ]
 }

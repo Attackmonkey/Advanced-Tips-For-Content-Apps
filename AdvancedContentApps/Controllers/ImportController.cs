@@ -37,6 +37,11 @@ namespace AdvancedContentApps.Controllers
             using (var reader = new StreamReader(uploadedFile.OpenReadStream()))
             using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
             {
+                //get the header rows
+                csv.Read();
+                csv.ReadHeader();
+
+                //read the CSV data
                 while (csv.Read())
                 {
                     var title = csv.GetField<string>(0);

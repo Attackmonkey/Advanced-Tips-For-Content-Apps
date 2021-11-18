@@ -29,6 +29,8 @@
 
                 notificationsService.success(response);
 
+                $rootScope.$emit("RefreshCustomListView", {});
+
                 activate();
             }).error(function (data) {
                 vm.processing = false;
