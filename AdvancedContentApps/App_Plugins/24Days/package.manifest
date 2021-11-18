@@ -1,18 +1,4 @@
 ﻿{
-  //content apps
-  "contentApps": [
-    {
-      "name": "Article Import",
-      "alias": "articleImport",
-      "weight": 1,
-      "icon": "icon-cloud-upload",
-      "view": "~/App_Plugins/24Days/app.html",
-      "show": [
-        "+content/blog"
-      ]
-    }
-  ],
-
   // array of files we want to inject into the application
   "javascript": [
     "~/App_Plugins/24Days/24days.controller.js"

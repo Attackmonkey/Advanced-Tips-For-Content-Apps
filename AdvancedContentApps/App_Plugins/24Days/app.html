@@ -1,1 +1,48 @@
-﻿<h1>I AM YOUR APP!!!</h1>
+﻿<div ng-controller="24Days.ArticleImportController as vm">
+    <umb-box>
+        <umb-box-header title="Article import">
+        </umb-box-header>
+        <umb-box-content>
+            <p>
+                You can use this section to import a CSV file of articlke titles and excerpts. The CSV file <strong>must</strong> contain the following fields:
+            </p>
+            <ul>
+                <li>Title</li>
+                <li>Excerpt</li>
+            </ul>
+        </umb-box-content>
+    </umb-box>
+
+    <umb-box>
+        <umb-box-header title="Upload CSV file">
+        </umb-box-header>
+        <umb-box-content>
+            <div ng-show="vm.invalidFileFormat" class="alert alert-error property-error" style="display: none;">The uploaded file must be in <b>.csv</b> format.</div>
+            <div ng-show="vm.noFile" class="alert alert-error property-error" style="display: none;">A .csv file must be selected.</div>
+            <div class="umb-panel-group__details-status-actions ng-scope" ng-hide="vm.processing">
+                <div class="input-group">
+                    <label class="input-group-btn">
+                        <span class="btn btn-info" style="margin-bottom: 10px; text-align: center;">
+                            Select .csv <input type="file" accept=".csv" umb-file-upload ngf-multiple="false" class="ng-scope" style="display: none;">
+                        </span>
+                    </label>
+                    <input type="text" id="fileName" class="form-control" readonly style="text-align: center; width: 300px;" value="{{vm.fileName}}">
+                </div>
+                <umb-button action="vm.upload()"
+                            type="button"
+                            button-style="success"
+                            state="init"
+                            label="Upload file"
+                            ng-if="vm.fileName"
+                            icon="icon-inbox">
+                </umb-button>
+            </div>
+            <div class="umb-panel-group__details-status-actions ng-scope" ng-show="vm.processing">
+                <div class="clearfix ng-scope">
+                    <div class="alert alert-info">Processing file<strong> {{vm.fileName}} </strong></div>
+                </div>
+                <umb-load-indicator></umb-load-indicator>
+            </div>
+        </umb-box-content>
+    </umb-box>
+</div>

@@ -484,5 +484,6 @@ $RECYCLE.BIN/
 # Nuget package Umbraco.Cms.StaticAssets will copy them in during dotnet build
 **/wwwroot/umbraco/
 
+# Include databases, as we need those for the example site
 !Umbraco.mdf
 !Umbraco_log.ldf
