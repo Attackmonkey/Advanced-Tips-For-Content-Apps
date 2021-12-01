@@ -10,7 +10,7 @@ using Umbraco.Cms.Core.Models.Membership;
 
 namespace AdvancedContentApps.ContentApps
 {
-    public class WordCounterAppComponent : IComposer
+    public class ArticleImportAppComponent : IComposer
     {
         public void Compose(IUmbracoBuilder builder)
         {
